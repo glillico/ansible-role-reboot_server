@@ -1,2 +1,13 @@
 ---
 # tasks file for ansible-role-reboot_server
+
+- name: Reboot server.
+  reboot:
+    reboot_timeout: 300
+
+- name: Waiting for server reboot to complete.
+  wait_for_connection:
+    connect_timeout: 20
+    sleep: 5
+    delay: 5
+    timeout: 300
