@@ -5,7 +5,7 @@
   reboot:
     reboot_timeout: 300
 
-- name: Waiting for server reboot to complete.
+- name: Server reboot completed.
   wait_for_connection:
     connect_timeout: 20
     sleep: 5
